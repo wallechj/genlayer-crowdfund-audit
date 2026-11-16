@@ -56,6 +56,7 @@ Refundable $120 of $48,500 raised. A second campaign with a future delivery dead
 
 ## Verification
 
-- Deployed contract: (fill in after deploy)
-- Studio verification: (fill in after deploy — expected 28 transactions: 17 SUCCESS, 11 intentional ERRORs)
+- Deployed contract: 0x3240C5df1Cb14d3F683907d769A2AC13eF6cC626 ([explorer](https://explorer-studio.genlayer.com/address/0x3240C5df1Cb14d3F683907d769A2AC13eF6cC626)), deployed 2026-11-16 on GenLayer Studio.
+- Studio verification 2026-11-16: 29 transactions — 18 SUCCESS, 11 intentional ERRORs (deploy 1 + 17 successful calls + 11 negative tests), every step matching `test_flow.md`.
+- Claim 0 valid/high: the $120 Collector's Edition never shipped (campaign page: delayed indefinitely, no tracking; Update #15 confirms no ship date), refundable $120 of $48,500 raised. Claims 1–5 invalid: soundtrack delivered (Update #12), T-shirts shipped (Update #14), repeat of the accepted finding (duplicate), repeat of the rejected claim (own grounding), dead campaign page. The delivery-deadline boundary holds: a claim on the 2030 campaign fails with "delivery deadline has not passed". Severity invariant holds on all six. 11 negative tests pass.
 - Known boundary (same class as earlier contracts, not fixed): reading a nonexistent campaign or claim fails with a raw `KeyError` (TreeMap lookup) instead of a friendly message — still rejected, not a valid read.
