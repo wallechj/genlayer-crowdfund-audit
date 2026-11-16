@@ -1,7 +1,7 @@
 # CrowdfundAudit — test flow
 
 Two Studio test accounts: A = campaign creator (deployer), B = backer.
-Deployed contract address: (fill in after deploy)
+Deployed contract address: 0x3240C5df1Cb14d3F683907d769A2AC13eF6cC626
 
 Fixture files must be live on the repo's main branch BEFORE running the assessment steps (validators fetch them at assessment time):
 - campaign: https://raw.githubusercontent.com/wallechj/genlayer-crowdfund-audit/main/examples/campaign.md
@@ -126,4 +126,4 @@ As A, call reopen_campaign(0). Expected: null; get_campaign(0).status = "open".
 
 ## Expected transaction count
 
-Deploy (1) + successful calls (create 0, submit 0–2, assess 0–2, submit 3–4, assess 3–4, create 1, create 2, submit 5, assess 5, close, reopen = 17) + negative tests (11) = 28 transactions: 17 SUCCESS, 11 intentional ERRORs.
+Deploy (1) + successful calls (create 0, submit 0–2, assess 0–2, submit 3–4, assess 3–4, create 1, create 2, submit 5, assess 5, close, reopen = 17) + negative tests (11) = 29 transactions: 18 SUCCESS, 11 intentional ERRORs.
